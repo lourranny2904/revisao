@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Exercícios</title>
+</head>
+<body>
+    <h1>Meus Exercícios</h1>
+
+    <ul>
+        {% if exercicios %}
+            {% for exercicio in exercicios %}
+                <li>{{ exercicio.nome_exercicio }}: {{ exercicio.descricao }}</li>
+            {% endfor %}
+        {% else %}
+            <li>Nenhum exercício encontrado.</li>
+        {% endif %}
+    </ul>
+
+    <a href="{{ url_for('exercicios') }}">Voltar para a página de exercícios</a>
+</body>
+</html>

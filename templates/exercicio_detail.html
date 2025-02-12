@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Exercício</title>
+</head>
+<body>
+    <h1>{{ exercicio.nome_exercicio }}</h1>
+    <p><strong>Descrição:</strong> {{ exercicio.descricao }}</p>
+    <p><strong>ID do Usuário:</strong> {{ exercicio.usuario_id }}</p>
+    <ul>
+        <li><a href="{{ url_for('exercicios') }}">voltar</a>  </li>
+        <li><a href="{{ url_for('index') }}">voltar a página inicial </a>  </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <a href="{{ url_for('exercicios') }}">Cadastrar Exercícios</a> 
+
+    <h1>Bem-vindo, {{ matricula }}!</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>  
+
+    <h2>Seus Exercícios</h2>
+    <ul>
+        <li><a href="{{ url_for('mostrar_exercicios') }}">Ver< exercicios/a>  </li>
+    </ul>
+    </div>
+</body>
+</html>
