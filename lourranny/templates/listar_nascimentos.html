@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Nascimentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Nascimentos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Bebê</th>
+                <th>Data de Nascimento</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Mãe</th>
+                <th>Médico</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for nascimento in nascimentos %}
+            <tr>
+                <td>{{ nascimento.nome }}</td>
+                <td>{{ nascimento.data_nascimento }}</td>
+                <td>{{ nascimento.peso }}</td>
+                <td>{{ nascimento.altura }}</td>
+                <td>{{ nascimento.mae.nome }}</td>
+                <td>{{ nascimento.parto.medico.nome if nascimento.parto.medico else 'Não informado' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+
+    <a href="{{ url_for('index') }}">Voltar para a Página Inicial</a>
+</body>
+</html>

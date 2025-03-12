@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Mãe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Cadastrar Mãe</h1>
+   <!-- cadastrar_mae.html -->
+<form action="/cadastrar_mae" method="POST">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="text" name="telefone" placeholder="Telefone" required>
+    <input type="number" name="idade" placeholder="Idade" required>
+    <button type="submit">Cadastrar Mãe</button>
+</form>
+</body>
+</html>

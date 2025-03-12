@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login ou Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Sistema</h1>
+        <p>Por favor, faça login ou crie uma conta para continuar.</p>
+
+        <div class="auth-options">
+            <div class="auth-option">
+                <h2>Login</h2>
+                <form action="{{ url_for('auth.login') }}" method="POST">
+                    <div>
+                        <label for="username">Nome de usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <div class="auth-option">
+                <h2>cadastrar</h2>
+                <form action="{{ url_for('auth.register') }}" method="POST">
+                    <div>
+                        <label for="username">Nome de usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="password_confirmation">Confirmar Senha:</label>
+                        <input type="password" id="password_confirmation" name="password_confirmation" required>
+                    </div>
+                    <button type="submit">Criar Conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

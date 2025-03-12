@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cadastrar Usuário</h1>
+    <form action="{{ url_for('register') }}" method="post">
+        <input type="text" name="username" placeholder="Nome de Usuário" required><br>
+        <input type="email" name="email" placeholder="E-mail" required><br>
+        <input type="password" name="password" placeholder="Senha" required><br>
+        <input type="password" name="password_confirmation" placeholder="Confirmar Senha" required><br>
+        <button type="submit">Registrar</button>
+    </form>
+    <p><a href="{{ url_for('login') }}">Já tem uma conta? Faça login</a></p>
+</body>
+</html>
